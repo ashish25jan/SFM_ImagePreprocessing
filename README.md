@@ -66,6 +66,7 @@ of python wrapper for matlab.
 BPDHE(CE)
 Run the bpdhe.py file as below:
 python bpdhe.py <path to dataset>
+
 There is one problem with this implementation, it outputs a rotated image.
 To get the correct orientation, please run the rotate.py as below:
 python rotate.py <path to image processed by bpdhe/*.format >
@@ -84,34 +85,29 @@ python tristate.py <path to dataset/*.format >
 
 The above matlab codes saves the processed image in the same folder in which they exist.
 Running Photoscan:
-• File -> new -> add all the images you require.
-• Workflow -> Allign Photo
-o Set tie points to 200,000.
-• After the allignment is done. Get camera pose from Tools -> Export
-Camera (XML format)
-• Reprojection Error can be calculated by the code provided in the
-submission_code folder(reprojectioner.py)
-• Tool -> Run Script -> repro.py. This prints the reprojection error for whole
-chunk.
-• If you want to Build Dense Cloud. Workflow -> Build Dense Cloud
+1. File -> new -> add all the images you require.
+2. Workflow -> Allign Photo
+3. Set tie points to 200,000.
+4. After the allignment is done. Get camera pose from Tools -> Export Camera (XML format)
+5. Reprojection Error can be calculated by the code provided in the submission_code folder(reprojectioner.py)
+6. Tool -> Run Script -> repro.py. This prints the reprojection error for whole chunk.
+7. If you want to Build Dense Cloud. Workflow -> Build Dense Cloud
 
 Running Evaluation:
 The evaluation can be run by following command:
 Python Evaluator.py <reference_camera.xml> <estimated_camera.xml>
 This prints the result on terminal.
+
 Notes:
-o To obtain the camera pose from photoscan, you would have to obtain trial
-licence. Its normally for 30 days.
-o You can create your own reference camera.xml file, but I don’t have any
-interface for it. You can obtain transformation matrix from projection
-matrix by using pro2trans.py in submission folder. Commandpython
-pro2trans.py <path to file/*.format>
+1. To obtain the camera pose from photoscan, you would have to obtain trial licence. Its normally for 30 days.
+2. You can create your own reference camera.xml file, but I don’t have any interface for it. You can obtain transformation matrix from projection matrix by using pro2trans.py in submission folder. 
+Commandpython pro2trans.py <path to file/*.format>
 It expects the projection matrix for individual cameras in separate files.
-o The matlab codes takes a while to initiates and is very slow.
+3. The matlab codes takes a while to initiates and is very slow.
 
 
 Datasets:
-https://cvlab.epfl.ch/data/strechamvs/ - Semper, City Hall.
-https://www.gcc.tu-darmstadt.de/home/proj/mve/ -MVE Kermit
-https://github.com/rfabbri/pavilion-multiview-3d-dataset - Pavilion dataset
-https://icwww.epfl.ch/~marquez/multiview/denseMVS.html - Fountain_dense, Herzues
+1. https://cvlab.epfl.ch/data/strechamvs/ - Semper, City Hall.
+2. https://www.gcc.tu-darmstadt.de/home/proj/mve/ -MVE Kermit
+3. https://github.com/rfabbri/pavilion-multiview-3d-dataset - Pavilion dataset
+4. https://icwww.epfl.ch/~marquez/multiview/denseMVS.html - Fountain_dense, Herzues
