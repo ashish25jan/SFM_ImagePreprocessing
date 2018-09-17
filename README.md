@@ -1,21 +1,22 @@
-Read Me
+
 The readme file is organised as follows:
-o Requirements
-• File structure
-• How to run the code
-• How to use Photoscan pro
-• How to run Evaluation
+1. Requirements
+2. File structure
+3. How to run the code
+4. How to use Photoscan pro
+5. How to run Evaluation
+
 Requirements
-o Python 3(3.5 desired).
-o Python signal processing module scipy,scikit,skimage.
-o Python Image processing module.
-o Python wrapper for Matlab.
-o Python numpy module.
-o Matlab R2015 with Image processing toolbox.
-o OpenCV 3.0
-o GIMP(only if image editing is required).
-o Photoscan Pro(version is important, since script are version specific).
-o ImageMagick(only if noise is to be added)
+1. Python 3(3.5 desired).
+2. Python signal processing module scipy,scikit,skimage.
+3. Python Image processing module.
+4. Python wrapper for Matlab.
+5. Python numpy module.
+6. Matlab R2015 with Image processing toolbox.
+7. OpenCV 3.0
+8. GIMP(only if image editing is required).
+9. Photoscan Pro(version is important, since script are version specific).
+10. ImageMagick(only if noise is to be added)
 
 File Structure
 
@@ -31,18 +32,18 @@ python main.py <Type of Image Processing> <Type Of Filter> <Path To dataset/*.fo
 Type Of Image Processing = CE or denoise(case sensitive)
 Type of Filters:
 
-Filter Type			 Command line option
+Filter Type			            Command line option
 
-Bilateral Filter 			bilateral
-Gaussian Filter 			gaussian
-Non-Local Mean 				Nlm
-Total Variation Filter 			Tv
-Wavelet Denoising 			Wavelet
-Wiener Filter 				Wiener
-Sigmoid Gamma Correction 		sigmoid
-CLAHE 					clahe
-Logarithmic Gamma Correction 		log
-Histogram Equalisation 			he
+1. Bilateral Filter         =>       bilateral
+2. Gaussian Filter 			    =>       gaussian
+3. Non-Local Mean 				  =>       Nlm
+4. Total Variation Filter 	=>		   Tv
+5. Wavelet Denoising 			  =>       Wavelet
+6. Wiener Filter 				    =>       Wiener
+7. Sigmoid Gamma Correction =>		   sigmoid
+8. CLAHE 				            =>    	 clahe
+9. Logarithmic Gamma Correction  =>  log
+10. Histogram Equalisation 			 =>  he
 
 Once this command (1), is executed, a folder with the name of processing type (CE or
 denoising) is created, which contains folder with the name of the type of filter used. This
@@ -53,10 +54,10 @@ one dataset, please move and save it in different location, otherwise, when you 
 for second time, all the images will get modified or lost.
 Matlab&Python Wrapper:
 The folder contains four sub-folders:
-• BPDHE
-• DHECI
-• DONG
-• TRISTATE
+1. BPDHE
+2. DHECI
+3. DONG
+4. TRISTATE
 
 Running the code inside this is tricky since it’s a wrapper for matlab code. Hence, if you run
 into problem, kindly let me know. Its not the problem with the code but with the complexity
